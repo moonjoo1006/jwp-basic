@@ -1,0 +1,17 @@
+package next.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ForwardController implements Controller{
+    private String forwardUrl;
+
+    ForwardController(String forwardUrl) {
+        this.forwardUrl = forwardUrl;
+    }
+
+    @Override
+    public String execute(HttpServletRequest req, HttpServletResponse res) throws Exception {
+        return forwardUrl;
+    }
+}
